@@ -353,7 +353,7 @@
             this.cmdShowList_Phones.TabIndex = 2;
             this.cmdShowList_Phones.Text = "Show List";
             this.cmdShowList_Phones.UseVisualStyleBackColor = false;
-            this.cmdShowList_Phones.Visible = false;
+            this.cmdShowList_Phones.Click += new System.EventHandler(this.cmdShowList_Phones_Click);
             // 
             // txtPh3
             // 
@@ -595,7 +595,7 @@
             this.cmdShowList_Bikes.TabIndex = 2;
             this.cmdShowList_Bikes.Text = "Show List";
             this.cmdShowList_Bikes.UseVisualStyleBackColor = false;
-            this.cmdShowList_Bikes.Visible = false;
+            this.cmdShowList_Bikes.Click += new System.EventHandler(this.cmdShowList_Bikes_Click);
             // 
             // label1
             // 
@@ -760,7 +760,7 @@
             this.cmdShowList_Car.TabIndex = 22;
             this.cmdShowList_Car.Text = "Show List";
             this.cmdShowList_Car.UseVisualStyleBackColor = false;
-            this.cmdShowList_Car.Visible = false;
+            this.cmdShowList_Car.Click += new System.EventHandler(this.cmdShowList_Car_Click);
             // 
             // label4
             // 

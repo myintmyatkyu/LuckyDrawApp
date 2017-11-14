@@ -66,3 +66,4 @@ D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmCars.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Data;
 
 namespace LuckyDrawApp
 {
@@ -34,6 +35,67 @@ namespace LuckyDrawApp
             dr.Dispose();
             return isExisted;
             
+        }
+
+        public static DataTable GetWinningNumbers(string type)
+        {
+            string tickets = "";
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("SrNo");
+            dt.Columns.Add("TicketNo");
+            dt.Columns.Add("Branch");
+
+            string filePath = "";
+            if (type == "car") { filePath = "Cars.csv"; }
+            if (type == "bike") { filePath="Bikes.csv";}
+            if (type == "phone") { filePath="Phones.csv";}
+
+
+            if (File.Exists(filePath))
+            {
+                String[] lines = File.ReadAllLines(filePath);
+                
+                foreach (string s in lines)
+                {
+                    tickets += "'"+ s+"',";
+                }
+            }  
+
+            if (tickets.Trim().Length>0)
+            {
+                tickets = tickets.Substring(0, tickets.Trim().Length - 1);
+            }
+
+            MySqlConnection sqlcon = new MySqlConnection();
+            MySqlCommand sqlcmd = new MySqlCommand();
+            sqlcmd.CommandText = "Select ticketNo,branches.name as branchName from tickets inner join branches on branches.id=tickets.branch_id  where status='Staff Entery' and ticketno in ("+tickets+")";
+            
+            sqlcon.ConnectionString = conString;
+            sqlcmd.Connection = sqlcon;
+            sqlcmd.Connection.Open();
+
+            
+
+            MySqlDataReader dr = sqlcmd.ExecuteReader();
+            
+
+            int i=1;
+            while(dr.Read())
+            {
+                DataRow dtr = dt.NewRow();
+                dtr["SrNo"] = i;
+                dtr["TicketNo"] = dr["ticketNo"];
+                dtr["Branch"] = dr["branchName"];
+                dt.Rows.Add(dtr);
+                i++;
+            }
+
+            sqlcon.Dispose();
+            sqlcmd.Dispose();
+            dr.Dispose();
+
+            return dt;
         }
 
         public static void Save(string winningNo,string type)

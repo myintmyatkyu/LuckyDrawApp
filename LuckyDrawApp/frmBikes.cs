@@ -37,7 +37,7 @@ namespace LuckyDrawApp
             ClearText();
             if (Screen.AllScreens.Length > 0)
             {
-                Screen secondScreen = Screen.AllScreens.Where(i => i.Primary == true).ToList()[0];
+                Screen secondScreen = Screen.AllScreens.Where(i => i.Primary != true).ToList()[0];
                 Rectangle bounds = secondScreen.Bounds;
                 this.SetBounds(bounds.X, bounds.Y, bounds.Width, bounds.Height);
                 this.StartPosition = FormStartPosition.Manual;

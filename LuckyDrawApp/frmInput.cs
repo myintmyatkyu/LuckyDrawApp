@@ -59,17 +59,6 @@ namespace LuckyDrawApp
             }
         }
 
-        private void cmdShow_Click(object sender, EventArgs e)
-        {
-            //frmVideo.panelFrame.Show();
-            //player.stop();
-            //frmVideo.panelFrame.BringToFront();
-            //frmVideo.lblTicketNo.Text = txtTicketNo.Text;
-            //frmVideo.lblTicketNo.Focus();
-            frmCars.frmCar.RefreshNumber(1, txtCar_1.Text);
-
-            
-        }
 
         frmCars frmCar= new frmCars();
         private void cmdStart_Click(object sender, EventArgs e)

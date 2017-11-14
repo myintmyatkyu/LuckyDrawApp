@@ -1,0 +1,65 @@
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\Interop.WMPLib.dll
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\AxInterop.WMPLib.dll
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.ResolveComReference.cache
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.pdb
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\Interop.WMPLib.dll
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.Properties.Resources.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.GenerateResource.Cache
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.exe
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.pdb
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmLuckyDraw.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmInput.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\Interop.WMPLib.dll
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\AxInterop.WMPLib.dll
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.ResolveComReference.cache
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.exe
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.pdb
+H:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe
+H:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.pdb
+H:\LuckyDrawApp\LuckyDrawApp\bin\Debug\Interop.WMPLib.dll
+H:\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmInput.resources
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmLuckyDraw.resources
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.Properties.Resources.resources
+H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.GenerateResource.Cache
+H:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\Interop.WMPLib.dll
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\AxInterop.WMPLib.dll
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.ResolveComReference.cache
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.exe
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.pdb
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.pdb
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\bin\Debug\Interop.WMPLib.dll
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmCars.resources
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmInput.resources
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmLuckyDraw.resources
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.Properties.Resources.resources
+D:\Projects\Visual Studio 2008\Projects\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.GenerateResource.Cache
+D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\Interop.WMPLib.dll
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\AxInterop.WMPLib.dll
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.ResolveComReference.cache
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.exe
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.pdb
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmCars.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmInput.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmLuckyDraw.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.Properties.Resources.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csproj.GenerateResource.Cache
+D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe
+D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.pdb
+D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\Interop.WMPLib.dll
+D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources

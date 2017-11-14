@@ -112,5 +112,60 @@ namespace LuckyDrawApp
             }
 
         }
+
+        public static bool isAlreadyWin(string number,ref string category)
+        {
+            bool isAlreadyWin = false;
+            category = "";
+
+            if (File.Exists("Cars.csv"))
+            {
+                String[] lines = File.ReadAllLines("Cars.csv");
+                foreach (string s in lines)
+                {
+                    if (s == number)
+                    {
+                        category = "Car";
+                        isAlreadyWin = true;
+                        return isAlreadyWin;
+                        
+                    }
+                }
+            }
+
+            if (File.Exists("Bikes.csv"))
+            {
+                String[] lines = File.ReadAllLines("Bikes.csv");
+                foreach (string s in lines)
+                {
+                    if (s == number)
+                    {
+                        category = "Bike";
+                        isAlreadyWin = true;
+                        return isAlreadyWin;
+
+                    }
+                }
+            }
+
+            if (File.Exists("Phones.csv"))
+            {
+                String[] lines = File.ReadAllLines("Phones.csv");
+                foreach (string s in lines)
+                {
+                    if (s == number)
+                    {
+                        category = "Phone";
+                        isAlreadyWin = true;
+                        return isAlreadyWin;
+
+                    }
+                }
+            }
+
+            return isAlreadyWin;
+
+
+        }
     }
 }

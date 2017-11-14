@@ -47,7 +47,7 @@
             this.txtPh5 = new System.Windows.Forms.TextBox();
             this.cmdGenerateIphones = new System.Windows.Forms.Button();
             this.txtPh4 = new System.Windows.Forms.TextBox();
-            this.cmdShowPhones = new System.Windows.Forms.Button();
+            this.cmdShowList_Phones = new System.Windows.Forms.Button();
             this.txtPh3 = new System.Windows.Forms.TextBox();
             this.lbIphones = new System.Windows.Forms.ListBox();
             this.txtPh2 = new System.Windows.Forms.TextBox();
@@ -67,7 +67,7 @@
             this.cmdStartBike = new System.Windows.Forms.Button();
             this.cmdBike_Check = new System.Windows.Forms.Button();
             this.cmdGenerateBikes = new System.Windows.Forms.Button();
-            this.cmdShowBikes = new System.Windows.Forms.Button();
+            this.cmdShowList_Bikes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbMotorCycles = new System.Windows.Forms.ListBox();
             this.lblControl = new System.Windows.Forms.Label();
@@ -81,6 +81,13 @@
             this.txtCar_3 = new System.Windows.Forms.TextBox();
             this.txtCar_2 = new System.Windows.Forms.TextBox();
             this.bgw = new System.ComponentModel.BackgroundWorker();
+            this.cmdShowList_Car = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCar_Current = new System.Windows.Forms.Label();
+            this.lblBikeCurrent = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblPhoneCurrent = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -143,7 +150,7 @@
             this.lbWinningNos.ItemHeight = 17;
             this.lbWinningNos.Location = new System.Drawing.Point(16, 156);
             this.lbWinningNos.Name = "lbWinningNos";
-            this.lbWinningNos.Size = new System.Drawing.Size(330, 157);
+            this.lbWinningNos.Size = new System.Drawing.Size(330, 123);
             this.lbWinningNos.TabIndex = 11;
             // 
             // label3
@@ -189,6 +196,8 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox3.Controls.Add(this.lblPhoneCurrent);
+            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.cmdClose_Phone);
             this.groupBox3.Controls.Add(this.cmdPhoneClear);
             this.groupBox3.Controls.Add(this.cmdAddPhone);
@@ -199,7 +208,7 @@
             this.groupBox3.Controls.Add(this.txtPh5);
             this.groupBox3.Controls.Add(this.cmdGenerateIphones);
             this.groupBox3.Controls.Add(this.txtPh4);
-            this.groupBox3.Controls.Add(this.cmdShowPhones);
+            this.groupBox3.Controls.Add(this.cmdShowList_Phones);
             this.groupBox3.Controls.Add(this.txtPh3);
             this.groupBox3.Controls.Add(this.lbIphones);
             this.groupBox3.Controls.Add(this.txtPh2);
@@ -332,18 +341,19 @@
             this.txtPh4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPh4.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
-            // cmdShowPhones
+            // cmdShowList_Phones
             // 
-            this.cmdShowPhones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmdShowPhones.BackColor = System.Drawing.Color.LightGreen;
-            this.cmdShowPhones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmdShowPhones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdShowPhones.Location = new System.Drawing.Point(16, 605);
-            this.cmdShowPhones.Name = "cmdShowPhones";
-            this.cmdShowPhones.Size = new System.Drawing.Size(145, 34);
-            this.cmdShowPhones.TabIndex = 2;
-            this.cmdShowPhones.Text = "Show in next Screen";
-            this.cmdShowPhones.UseVisualStyleBackColor = false;
+            this.cmdShowList_Phones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdShowList_Phones.BackColor = System.Drawing.Color.LightGreen;
+            this.cmdShowList_Phones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmdShowList_Phones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdShowList_Phones.Location = new System.Drawing.Point(16, 605);
+            this.cmdShowList_Phones.Name = "cmdShowList_Phones";
+            this.cmdShowList_Phones.Size = new System.Drawing.Size(145, 34);
+            this.cmdShowList_Phones.TabIndex = 2;
+            this.cmdShowList_Phones.Text = "Show List";
+            this.cmdShowList_Phones.UseVisualStyleBackColor = false;
+            this.cmdShowList_Phones.Visible = false;
             // 
             // txtPh3
             // 
@@ -398,6 +408,8 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Controls.Add(this.lblBikeCurrent);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cmdClose_Bike);
             this.groupBox2.Controls.Add(this.txtBike7);
             this.groupBox2.Controls.Add(this.txtBike6);
@@ -411,7 +423,7 @@
             this.groupBox2.Controls.Add(this.cmdStartBike);
             this.groupBox2.Controls.Add(this.cmdBike_Check);
             this.groupBox2.Controls.Add(this.cmdGenerateBikes);
-            this.groupBox2.Controls.Add(this.cmdShowBikes);
+            this.groupBox2.Controls.Add(this.cmdShowList_Bikes);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.lbMotorCycles);
             this.groupBox2.Location = new System.Drawing.Point(66, 375);
@@ -571,18 +583,19 @@
             this.cmdGenerateBikes.Visible = false;
             this.cmdGenerateBikes.Click += new System.EventHandler(this.cmdGenerateMotorCycles_Click);
             // 
-            // cmdShowBikes
+            // cmdShowList_Bikes
             // 
-            this.cmdShowBikes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cmdShowBikes.BackColor = System.Drawing.Color.LightGreen;
-            this.cmdShowBikes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmdShowBikes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdShowBikes.Location = new System.Drawing.Point(16, 284);
-            this.cmdShowBikes.Name = "cmdShowBikes";
-            this.cmdShowBikes.Size = new System.Drawing.Size(145, 34);
-            this.cmdShowBikes.TabIndex = 2;
-            this.cmdShowBikes.Text = "Show in next Screen";
-            this.cmdShowBikes.UseVisualStyleBackColor = false;
+            this.cmdShowList_Bikes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdShowList_Bikes.BackColor = System.Drawing.Color.LightGreen;
+            this.cmdShowList_Bikes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmdShowList_Bikes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdShowList_Bikes.Location = new System.Drawing.Point(16, 284);
+            this.cmdShowList_Bikes.Name = "cmdShowList_Bikes";
+            this.cmdShowList_Bikes.Size = new System.Drawing.Size(145, 34);
+            this.cmdShowList_Bikes.TabIndex = 2;
+            this.cmdShowList_Bikes.Text = "Show List";
+            this.cmdShowList_Bikes.UseVisualStyleBackColor = false;
+            this.cmdShowList_Bikes.Visible = false;
             // 
             // label1
             // 
@@ -620,6 +633,9 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Controls.Add(this.lblCar_Current);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.cmdShowList_Car);
             this.groupBox1.Controls.Add(this.cmdClose_Car);
             this.groupBox1.Controls.Add(this.cmdClear);
             this.groupBox1.Controls.Add(this.txtCar_7);
@@ -732,6 +748,83 @@
             this.bgw.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgw_DoWork);
             this.bgw.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgw_RunWorkerCompleted);
             // 
+            // cmdShowList_Car
+            // 
+            this.cmdShowList_Car.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmdShowList_Car.BackColor = System.Drawing.Color.LightGreen;
+            this.cmdShowList_Car.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmdShowList_Car.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdShowList_Car.Location = new System.Drawing.Point(16, 284);
+            this.cmdShowList_Car.Name = "cmdShowList_Car";
+            this.cmdShowList_Car.Size = new System.Drawing.Size(145, 34);
+            this.cmdShowList_Car.TabIndex = 22;
+            this.cmdShowList_Car.Text = "Show List";
+            this.cmdShowList_Car.UseVisualStyleBackColor = false;
+            this.cmdShowList_Car.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(264, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Current :";
+            // 
+            // lblCar_Current
+            // 
+            this.lblCar_Current.AutoSize = true;
+            this.lblCar_Current.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCar_Current.Location = new System.Drawing.Point(331, 133);
+            this.lblCar_Current.Name = "lblCar_Current";
+            this.lblCar_Current.Size = new System.Drawing.Size(15, 17);
+            this.lblCar_Current.TabIndex = 24;
+            this.lblCar_Current.Text = "0";
+            this.lblCar_Current.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblBikeCurrent
+            // 
+            this.lblBikeCurrent.AutoSize = true;
+            this.lblBikeCurrent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBikeCurrent.Location = new System.Drawing.Point(331, 135);
+            this.lblBikeCurrent.Name = "lblBikeCurrent";
+            this.lblBikeCurrent.Size = new System.Drawing.Size(15, 17);
+            this.lblBikeCurrent.TabIndex = 26;
+            this.lblBikeCurrent.Text = "0";
+            this.lblBikeCurrent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(264, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "Current :";
+            // 
+            // lblPhoneCurrent
+            // 
+            this.lblPhoneCurrent.AutoSize = true;
+            this.lblPhoneCurrent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneCurrent.Location = new System.Drawing.Point(331, 133);
+            this.lblPhoneCurrent.Name = "lblPhoneCurrent";
+            this.lblPhoneCurrent.Size = new System.Drawing.Size(15, 17);
+            this.lblPhoneCurrent.TabIndex = 28;
+            this.lblPhoneCurrent.Text = "0";
+            this.lblPhoneCurrent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(264, 133);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 17);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Current :";
+            // 
             // frmInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -766,13 +859,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button cmdStartBike;
         private System.Windows.Forms.Button cmdGenerateBikes;
-        private System.Windows.Forms.Button cmdShowBikes;
+        private System.Windows.Forms.Button cmdShowList_Bikes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblControl;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button cmdGenerateIphones;
-        private System.Windows.Forms.Button cmdShowPhones;
+        private System.Windows.Forms.Button cmdShowList_Phones;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cmdStartPhone;
         private System.Windows.Forms.Button cmdExit;
@@ -807,5 +900,12 @@
         private System.Windows.Forms.Button cmdClose_Car;
         private System.Windows.Forms.Button cmdClose_Bike;
         private System.Windows.Forms.Button cmdClose_Phone;
+        private System.Windows.Forms.Button cmdShowList_Car;
+        private System.Windows.Forms.Label lblCar_Current;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPhoneCurrent;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblBikeCurrent;
+        private System.Windows.Forms.Label label6;
     }
 }

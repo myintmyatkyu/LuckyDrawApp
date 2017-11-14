@@ -36,6 +36,7 @@ namespace LuckyDrawApp
                {
                    lbWinningNos.Items.Add(s);
                }
+               lblCar_Current.Text = lbWinningNos.Items.Count.ToString();
             }
 
             if (File.Exists("Bikes.csv"))
@@ -46,6 +47,7 @@ namespace LuckyDrawApp
                 {
                     lbMotorCycles.Items.Add(s);
                 }
+                lblBikeCurrent.Text = lbMotorCycles.Items.Count.ToString();
             }
 
             if (File.Exists("Phones.csv"))
@@ -56,6 +58,7 @@ namespace LuckyDrawApp
                 {
                     lbIphones.Items.Add(s);
                 }
+                lblPhoneCurrent.Text = lbIphones.Items.Count.ToString();
             }
         }
 
@@ -98,7 +101,7 @@ namespace LuckyDrawApp
             {
                 BackEnd.Save(currentNo,"car");
                 lbWinningNos.Items.Add(currentNo);
-
+                lblCar_Current.Text = lbWinningNos.Items.Count.ToString();
                 String[] lines= File.ReadAllLines("Cars.csv");
                 carSeriaNo = lines.Count();
 
@@ -265,7 +268,21 @@ namespace LuckyDrawApp
             currentNo = txtCar_1.Text.Trim() + txtCar_2.Text.Trim() + txtCar_3.Text.Trim() + txtCar_4.Text.Trim()+ txtCar_5.Text.Trim() + txtCar_6.Text.Trim() + txtCar_7.Text.Trim();
             cmdAddToCars.Enabled = false;
             currentType = "car";
-            bgw.RunWorkerAsync();
+
+            string category = "";
+
+            if(!BackEnd.isAlreadyWin(currentNo,ref category))
+            {
+                bgw.RunWorkerAsync();
+            }
+            else
+            {
+                frmCars.frmCar.ShowIncorrect();
+                MessageBox.Show("This number is already a winning number in "+category+" Category","Already Winning Number",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                
+            }
+
+            
         }
         bool isValid = false;
         private void bgw_DoWork(object sender, DoWorkEventArgs e)
@@ -278,7 +295,7 @@ namespace LuckyDrawApp
         {
             if (isValid)
             {
-                MessageBox.Show("The Winning No is Valid. Click Add to WinningNos to save");
+                
                 if(currentType=="car")
                 {
                     cmdAddToCars.Enabled = true;
@@ -294,12 +311,14 @@ namespace LuckyDrawApp
                     cmdAddPhone.Enabled = true;
                     frmPhones.frmPhone.ShowCorect();
                 }
+                MessageBox.Show("The winning number is Valid!!! Click Add to Winning No to save");
+                
                 
                 
             }
             else
             {
-                MessageBox.Show("The Winning No is invalid. Please Clear and Redraw the ticket again.");
+                MessageBox.Show("The winning number is invalid. Please Clear and redraw the ticket again.","Invalid Ticket Number",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if(currentType=="car")
                 {
                     cmdAddToCars.Enabled = false;
@@ -345,7 +364,17 @@ namespace LuckyDrawApp
             currentNo = currentNo_Bike;
             cmdBikeAdd.Enabled = false;
             currentType = "bike";
-            bgw.RunWorkerAsync();
+            string category = "";
+
+            if (!BackEnd.isAlreadyWin(currentNo, ref category))
+            {
+                bgw.RunWorkerAsync();
+            }
+            else
+            {
+                frmBikes.frmBike.ShowIncorrect();
+                MessageBox.Show("This number is already a winning number in " + category + " Category", "Already Winning Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void cmdBikeAdd_Click(object sender, EventArgs e)
@@ -354,6 +383,8 @@ namespace LuckyDrawApp
             {
                 BackEnd.Save(currentNo, "bike");
                 lbMotorCycles.Items.Add(currentNo);
+
+                lblBikeCurrent.Text = lbMotorCycles.Items.Count.ToString();
 
                 String[] lines = File.ReadAllLines("Bikes.csv");
                 bikeSerialNo = lines.Count();
@@ -408,7 +439,18 @@ namespace LuckyDrawApp
             currentNo = currentNo_Phone;
             cmdAddPhone.Enabled = false;
             currentType = "phone";
-            bgw.RunWorkerAsync();
+
+            string category = "";
+
+            if (!BackEnd.isAlreadyWin(currentNo, ref category))
+            {
+                bgw.RunWorkerAsync();
+            }
+            else
+            {
+                frmPhones.frmPhone.ShowIncorrect();
+                MessageBox.Show("This number is already a winning number in " + category + " Category", "Already Winning Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void cmdAddPhone_Click(object sender, EventArgs e)
@@ -417,6 +459,9 @@ namespace LuckyDrawApp
             {
                 BackEnd.Save(currentNo_Phone, "phone");
                 lbIphones.Items.Add(currentNo_Phone);
+
+
+                lbIphones.Text = lbIphones.Items.Count.ToString();
 
                 String[] lines = File.ReadAllLines("Phones.csv");
                 phoneSerialNo = lines.Count();

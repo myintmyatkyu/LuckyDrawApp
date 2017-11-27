@@ -63,7 +63,4 @@ D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
-X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
-X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
-X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmCars.resources
-X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources

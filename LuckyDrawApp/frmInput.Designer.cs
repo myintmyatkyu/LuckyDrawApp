@@ -221,6 +221,7 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "IPhones";
+
             // 
             // lblPhoneCurrent
             // 

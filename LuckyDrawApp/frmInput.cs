@@ -278,7 +278,7 @@ namespace LuckyDrawApp
             }
             else
             {
-                frmCars.frmCar.ShowIncorrect();
+                //frmCars.frmCar.ShowIncorrect();
                 MessageBox.Show("This number is already a winning number in "+category+" Category","Already Winning Number",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 
             }
@@ -301,19 +301,19 @@ namespace LuckyDrawApp
                 {
                     cmdAddToCars.Enabled = true;
                     cmdAddToCars.Focus();
-                    frmCars.frmCar.ShowCorect();
+                    //frmCars.frmCar.ShowCorect();
                 }
                 else if (currentType=="bike")
                 {
                     cmdBikeAdd.Enabled = true;
                     cmdBikeAdd.Focus();
-                    frmBikes.frmBike.ShowCorect();
+                    //frmBikes.frmBike.ShowCorect();
                 }
                 else if (currentType == "phone")
                 {
                     cmdAddPhone.Enabled = true;
                     cmdAddPhone.Focus();
-                    frmPhones.frmPhone.ShowCorect();
+                    //frmPhones.frmPhone.ShowCorect();
                 }
                 MessageBox.Show("The winning number is Valid!!! Click Add to Winning No to save");
                 
@@ -376,7 +376,7 @@ namespace LuckyDrawApp
             }
             else
             {
-                frmBikes.frmBike.ShowIncorrect();
+                //frmBikes.frmBike.ShowIncorrect();
                 MessageBox.Show("This number is already a winning number in " + category + " Category", "Already Winning Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -453,7 +453,7 @@ namespace LuckyDrawApp
             }
             else
             {
-                frmPhones.frmPhone.ShowIncorrect();
+                //frmPhones.frmPhone.ShowIncorrect();
                 MessageBox.Show("This number is already a winning number in " + category + " Category", "Already Winning Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -567,6 +567,8 @@ namespace LuckyDrawApp
                 this.SelectNextControl((Control)sender, true, true, true, true);
             }
         }
+
+
 
 
     }

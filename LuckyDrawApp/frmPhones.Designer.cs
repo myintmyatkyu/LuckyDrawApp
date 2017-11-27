@@ -415,10 +415,11 @@
             this.panelStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelStatus.BackColor = System.Drawing.Color.Transparent;
             this.panelStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelStatus.Location = new System.Drawing.Point(1258, 455);
+            this.panelStatus.Location = new System.Drawing.Point(1401, 733);
             this.panelStatus.Name = "panelStatus";
-            this.panelStatus.Size = new System.Drawing.Size(72, 56);
+            this.panelStatus.Size = new System.Drawing.Size(84, 74);
             this.panelStatus.TabIndex = 9;
+            this.panelStatus.Visible = false;
             // 
             // label51
             // 

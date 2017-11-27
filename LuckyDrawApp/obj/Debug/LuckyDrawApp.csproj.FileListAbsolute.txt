@@ -70,3 +70,4 @@ X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.r
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Split.resources
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Bike.resources
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Phone.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache

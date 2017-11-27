@@ -13,7 +13,12 @@ namespace LuckyDrawApp
         public static string conString = System.Configuration.ConfigurationManager.ConnectionStrings["ConString"].ToString();
         public static bool isValid(string pickedNo)
         {
+            if(pickedNo.Length!=7)
+            {
+                return false;
+            }
             return true;
+            //Below code will not run
             MySqlConnection sqlcon = new MySqlConnection();
             MySqlCommand sqlcmd = new MySqlCommand();
             //sqlcmd.CommandText = "Select ticketNo,branch_id,user_id,status,remarks,created_at,updated_at from tickets where ticketNo=@ticketNo and status='Staff Entery'";
@@ -100,7 +105,7 @@ namespace LuckyDrawApp
                         }
                         
                     }
-                    if(type=="bike" && r<=15)
+                    if(type=="bike")
                     {
                         if(r<=15)
                         {

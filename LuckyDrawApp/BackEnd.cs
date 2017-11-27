@@ -13,6 +13,7 @@ namespace LuckyDrawApp
         public static string conString = System.Configuration.ConfigurationManager.ConnectionStrings["ConString"].ToString();
         public static bool isValid(string pickedNo)
         {
+            return true;
             MySqlConnection sqlcon = new MySqlConnection();
             MySqlCommand sqlcmd = new MySqlCommand();
             //sqlcmd.CommandText = "Select ticketNo,branch_id,user_id,status,remarks,created_at,updated_at from tickets where ticketNo=@ticketNo and status='Staff Entery'";
@@ -53,10 +54,130 @@ namespace LuckyDrawApp
             dt2.Columns.Add("TicketNo");
             dt2.Columns.Add("Branch");
 
+            DataTable dt3 = new DataTable();
+            dt3.Columns.Add("SrNo");
+            dt3.Columns.Add("TicketNo");
+            dt3.Columns.Add("Branch");
+
+            DataTable dt4 = new DataTable();
+            dt4.Columns.Add("SrNo");
+            dt4.Columns.Add("TicketNo");
+            dt4.Columns.Add("Branch");
+
+            DataTable dt5 = new DataTable();
+            dt5.Columns.Add("SrNo");
+            dt5.Columns.Add("TicketNo");
+            dt5.Columns.Add("Branch");
+
             string filePath = "";
             if (type == "car") { filePath = "Cars.csv"; }
             if (type == "bike") { filePath="Bikes.csv";}
             if (type == "phone") { filePath="Phones.csv";}
+
+            if (File.Exists(filePath))
+            {
+                String[] lines = File.ReadAllLines(filePath);
+                int r=1;
+                foreach (string s in lines)
+                {
+                    if (type=="car")
+                    {
+                        if( r <= 8)
+                        {
+                            DataRow dd = dt.NewRow();
+                            dd["SrNo"] = r;
+                            dd["TicketNo"] = s;
+                            dd["Branch"] = "";
+                            dt.Rows.Add(dd);
+                        }
+                        else
+                        {
+                            DataRow dd1 = dt2.NewRow();
+                            dd1["SrNo"] = r;
+                            dd1["TicketNo"] = s;
+                            dd1["Branch"] = "";
+                            dt2.Rows.Add(dd1);
+                        }
+                        
+                    }
+                    if(type=="bike" && r<=15)
+                    {
+                        if(r<=15)
+                        {
+                            DataRow dd = dt.NewRow();
+                            dd["SrNo"] = r;
+                            dd["TicketNo"] = s;
+                            dd["Branch"] = "";
+                            dt.Rows.Add(dd);
+                        }
+                        else
+                        {
+                            DataRow dd1 = dt2.NewRow();
+                            dd1["SrNo"] = r;
+                            dd1["TicketNo"] = s;
+                            dd1["Branch"] = "";
+                            dt2.Rows.Add(dd1);
+                        }
+                        
+                    }
+                    if (type == "phone")
+                    {
+                        if (r <= 10)
+                        {
+                            DataRow dd = dt.NewRow();
+                            dd["SrNo"] = r;
+                            dd["TicketNo"] = s;
+                            dd["Branch"] = "";
+                            dt.Rows.Add(dd);
+                        }
+                        else if (r <= 20)
+                        {
+                            DataRow dd1 = dt2.NewRow();
+                            dd1["SrNo"] = r;
+                            dd1["TicketNo"] = s;
+                            dd1["Branch"] = "";
+                            dt2.Rows.Add(dd1);
+                        }
+                        else if (r <= 30)
+                        {
+                            DataRow dd1 = dt3.NewRow();
+                            dd1["SrNo"] = r;
+                            dd1["TicketNo"] = s;
+                            dd1["Branch"] = "";
+                            dt3.Rows.Add(dd1);
+                        }
+                        else if (r <= 40)
+                        {
+                            DataRow dd1 = dt4.NewRow();
+                            dd1["SrNo"] = r;
+                            dd1["TicketNo"] = s;
+                            dd1["Branch"] = "";
+                            dt4.Rows.Add(dd1);
+                        }
+                        else
+                        {
+                            DataRow dd1 = dt5.NewRow();
+                            dd1["SrNo"] = r;
+                            dd1["TicketNo"] = s;
+                            dd1["Branch"] = "";
+                            dt5.Rows.Add(dd1);
+                        }
+                        
+                    }
+                    r++;
+                    
+                }
+            }
+
+            ds.Tables.Add(dt);
+            ds.Tables.Add(dt2);
+            ds.Tables.Add(dt3);
+            ds.Tables.Add(dt4);
+            ds.Tables.Add(dt5);
+
+            return ds;
+
+            //below code will not execute;
 
             if (File.Exists(filePath))
             {

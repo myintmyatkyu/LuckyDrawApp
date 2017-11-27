@@ -59,10 +59,8 @@ D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe
 D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.pdb
 D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\Interop.WMPLib.dll
 D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
-D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
-<<<<<<< HEAD
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources
 =======
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
@@ -70,4 +68,5 @@ X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resour
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmCars.resources
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Split.resources
->>>>>>> 3cc6a7fa0b246b6b45001640ed6293a45086245d
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Bike.resources
+D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Phone.resources

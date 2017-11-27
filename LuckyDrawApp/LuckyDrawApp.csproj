@@ -77,11 +77,17 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWinningList_Split.cs">
+    <Compile Include="frmWinningList_Phone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWinningList_Split.Designer.cs">
-      <DependentUpon>frmWinningList_Split.cs</DependentUpon>
+    <Compile Include="frmWinningList_Phone.Designer.cs">
+      <DependentUpon>frmWinningList_Phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWinningList_Bike.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWinningList_Bike.Designer.cs">
+      <DependentUpon>frmWinningList_Bike.cs</DependentUpon>
     </Compile>
     <Compile Include="frmWinningList.cs">
       <SubType>Form</SubType>
@@ -107,8 +113,11 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWinningList_Split.resx">
-      <DependentUpon>frmWinningList_Split.cs</DependentUpon>
+    <EmbeddedResource Include="frmWinningList_Phone.resx">
+      <DependentUpon>frmWinningList_Phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWinningList_Bike.resx">
+      <DependentUpon>frmWinningList_Bike.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWinningList.resx">
       <DependentUpon>frmWinningList.cs</DependentUpon>
@@ -173,6 +182,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Incorrect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Car_BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Bike_BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Phone_BG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

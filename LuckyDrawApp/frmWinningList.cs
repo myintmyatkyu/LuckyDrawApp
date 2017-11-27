@@ -11,12 +11,13 @@ namespace LuckyDrawApp
 {
     public partial class frmWinningList : Form
     {
+        string url = System.Configuration.ConfigurationManager.AppSettings["CarPath_WinnerList"].ToString();
         public frmWinningList(string title,DataSet ds)
         {
             InitializeComponent();
-            this.lblTitle.Text = title;
+            //this.lblTitle.Text = title;
             dgv.DataSource = ds.Tables[0];
-
+            dgv2.DataSource = ds.Tables[1];
         }
 
         private void frmWinningList_Load(object sender, EventArgs e)
@@ -29,6 +30,17 @@ namespace LuckyDrawApp
                 this.StartPosition = FormStartPosition.Manual;
             }
             dgv.ClearSelection();
+            dgv2.ClearSelection();
+            wmPlayer.URL = url;
+            this.wmPlayer.Dock = DockStyle.Fill;
+        }
+
+        private void frmWinningList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

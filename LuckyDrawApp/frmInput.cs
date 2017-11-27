@@ -108,6 +108,7 @@ namespace LuckyDrawApp
                 frmCars.frmCar.AddToWinningList(currentNo, carSeriaNo);
                 MessageBox.Show("Successfully save to winning list");
                 cmdClear.PerformClick();
+                txtCar_1.Focus();
             }
             catch(Exception ex)
             {
@@ -299,16 +300,19 @@ namespace LuckyDrawApp
                 if(currentType=="car")
                 {
                     cmdAddToCars.Enabled = true;
+                    cmdAddToCars.Focus();
                     frmCars.frmCar.ShowCorect();
                 }
                 else if (currentType=="bike")
                 {
                     cmdBikeAdd.Enabled = true;
+                    cmdBikeAdd.Focus();
                     frmBikes.frmBike.ShowCorect();
                 }
                 else if (currentType == "phone")
                 {
                     cmdAddPhone.Enabled = true;
+                    cmdAddPhone.Focus();
                     frmPhones.frmPhone.ShowCorect();
                 }
                 MessageBox.Show("The winning number is Valid!!! Click Add to Winning No to save");
@@ -392,6 +396,7 @@ namespace LuckyDrawApp
                 frmBikes.frmBike.AddToWinningList(currentNo, bikeSerialNo);
                 MessageBox.Show("Successfully save to winning list");
                 cmdBikeClear.PerformClick();
+                txtBike1.Focus();
             }
             catch (Exception ex)
             {
@@ -469,6 +474,7 @@ namespace LuckyDrawApp
                 frmPhones.frmPhone.AddToWinningList(currentNo, phoneSerialNo);
                 MessageBox.Show("Successfully save to winning list");
                 cmdPhoneClear.PerformClick();
+                txtPh1.Focus();
             }
             catch (Exception ex)
             {
@@ -507,20 +513,6 @@ namespace LuckyDrawApp
 
         private void cmdShowList_Car_Click(object sender, EventArgs e)
         {
-            //FormCollection frms = Application.OpenForms;
-            //Form found= new Form();
-            //foreach (Form f in frms)
-            //{
-            //    if (f.Name == "frmWinningList")
-            //    {
-            //        found = f;
-            //    }
-
-            //}
-            //if(found.Name!="")
-            //{
-            //    found.Dispose();
-            //}
             DataSet dt= BackEnd.GetWinningNumbers("car");
             frmWinningList frmWinning = new frmWinningList("CAR WINNING NUMBERS",dt);
             frmWinning.Show();
@@ -543,7 +535,7 @@ namespace LuckyDrawApp
             //    found.Dispose();
             //}
             DataSet dt = BackEnd.GetWinningNumbers("bike");
-            frmWinningList_Split frmWinning = new frmWinningList_Split("MOTOR CYCLE WINNING NUMBERS", dt);
+            frmWinningList_Bike frmWinning = new frmWinningList_Bike("MOTOR CYCLE WINNING NUMBERS", dt);
             frmWinning.Show();
         }
 
@@ -564,9 +556,18 @@ namespace LuckyDrawApp
             //    found.Dispose();
             //}
             DataSet dt = BackEnd.GetWinningNumbers("phone");
-            frmWinningList_Split frmWinning = new frmWinningList_Split("PHONE WINNING NUMBERS", dt);
+            frmWinningList_Phone frmWinning = new frmWinningList_Phone("PHONE WINNING NUMBERS", dt);
             frmWinning.Show();
         }
+
+        private void txtCar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+
 
     }
 }

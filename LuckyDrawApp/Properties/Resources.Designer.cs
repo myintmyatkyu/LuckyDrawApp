@@ -73,6 +73,26 @@ namespace LuckyDrawApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bike_BG {
+            get {
+                object obj = ResourceManager.GetObject("Bike_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Car_BG {
+            get {
+                object obj = ResourceManager.GetObject("Car_BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Correct {
             get {
                 object obj = ResourceManager.GetObject("Correct", resourceCulture);
@@ -96,6 +116,16 @@ namespace LuckyDrawApp.Properties {
         internal static System.Drawing.Bitmap MacBG {
             get {
                 object obj = ResourceManager.GetObject("MacBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Phone_BG {
+            get {
+                object obj = ResourceManager.GetObject("Phone_BG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

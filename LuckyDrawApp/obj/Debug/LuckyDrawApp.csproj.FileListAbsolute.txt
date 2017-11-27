@@ -11,7 +11,6 @@ X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.exe
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.pdb
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmLuckyDraw.resources
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmInput.resources
-X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
 X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
 H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\Interop.WMPLib.dll
 H:\LuckyDrawApp\LuckyDrawApp\obj\Debug\AxInterop.WMPLib.dll
@@ -63,4 +62,12 @@ D:\LuckyDrawApp\LuckyDrawApp\bin\Debug\AxInterop.WMPLib.dll
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.csprojResolveAssemblyReference.cache
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmBikes.resources
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
+<<<<<<< HEAD
 D:\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources
+=======
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\bin\Debug\LuckyDrawApp.exe.config
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmPhones.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmCars.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList.resources
+X:\Archer\Oops\LuckyDrawApp\LuckyDrawApp\obj\Debug\LuckyDrawApp.frmWinningList_Split.resources
+>>>>>>> 3cc6a7fa0b246b6b45001640ed6293a45086245d

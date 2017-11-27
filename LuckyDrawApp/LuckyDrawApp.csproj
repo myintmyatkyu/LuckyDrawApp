@@ -77,6 +77,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmWinningList_Split.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWinningList_Split.Designer.cs">
+      <DependentUpon>frmWinningList_Split.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWinningList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWinningList_Split.resx">
+      <DependentUpon>frmWinningList_Split.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWinningList.resx">
       <DependentUpon>frmWinningList.cs</DependentUpon>

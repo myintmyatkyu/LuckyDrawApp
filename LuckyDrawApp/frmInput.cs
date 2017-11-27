@@ -461,7 +461,7 @@ namespace LuckyDrawApp
                 lbIphones.Items.Add(currentNo_Phone);
 
 
-                lbIphones.Text = lbIphones.Items.Count.ToString();
+                lblPhoneCurrent.Text = lbIphones.Items.Count.ToString();
 
                 String[] lines = File.ReadAllLines("Phones.csv");
                 phoneSerialNo = lines.Count();
@@ -507,64 +507,64 @@ namespace LuckyDrawApp
 
         private void cmdShowList_Car_Click(object sender, EventArgs e)
         {
-            FormCollection frms = Application.OpenForms;
-            Form found= new Form();
-            foreach (Form f in frms)
-            {
-                if (f.Name == "frmWinningList")
-                {
-                    found = f;
-                }
+            //FormCollection frms = Application.OpenForms;
+            //Form found= new Form();
+            //foreach (Form f in frms)
+            //{
+            //    if (f.Name == "frmWinningList")
+            //    {
+            //        found = f;
+            //    }
 
-            }
-            if(found.Name!="")
-            {
-                found.Dispose();
-            }
-            DataTable dt= BackEnd.GetWinningNumbers("car");
+            //}
+            //if(found.Name!="")
+            //{
+            //    found.Dispose();
+            //}
+            DataSet dt= BackEnd.GetWinningNumbers("car");
             frmWinningList frmWinning = new frmWinningList("CAR WINNING NUMBERS",dt);
             frmWinning.Show();
         }
 
         private void cmdShowList_Bikes_Click(object sender, EventArgs e)
         {
-            FormCollection frms = Application.OpenForms;
-            Form found = new Form();
-            foreach (Form f in frms)
-            {
-                if (f.Name == "frmWinningList")
-                {
-                    found = f;
-                }
+            //FormCollection frms = Application.OpenForms;
+            //Form found = new Form();
+            //foreach (Form f in frms)
+            //{
+            //    if (f.Name == "frmWinningList")
+            //    {
+            //        found = f;
+            //    }
 
-            }
-            if (found.Name != "")
-            {
-                found.Dispose();
-            }
-            DataTable dt = BackEnd.GetWinningNumbers("bike");
-            frmWinningList frmWinning = new frmWinningList("MOTOR CYCLE WINNING NUMBERS", dt);
+            //}
+            //if (found.Name != "")
+            //{
+            //    found.Dispose();
+            //}
+            DataSet dt = BackEnd.GetWinningNumbers("bike");
+            frmWinningList_Split frmWinning = new frmWinningList_Split("MOTOR CYCLE WINNING NUMBERS", dt);
             frmWinning.Show();
         }
 
         private void cmdShowList_Phones_Click(object sender, EventArgs e)
         {
-            FormCollection frms = Application.OpenForms;
-            Form found = new Form();
-            foreach (Form f in frms)
-            {
-                if (f.Name == "frmWinningList")
-                {
-                    found = f;
-                }
+            //FormCollection frms = Application.OpenForms;
+            //Form found = new Form();
+            //foreach (Form f in frms)
+            //{
+            //    if (f.Name == "frmWinningList")
+            //    {
+            //        found = f;
+            //    }
 
-            }
-            if (found.Name != "")
-            {
-                found.Dispose();
-            }
-            DataTable dt = BackEnd.GetWinningNumbers("phone");
-            frmWinningList frmWinning = new frmWinningList("PHONE WINNING NUMBERS", dt);
+            //}
+            //if (found.Name != "")
+            //{
+            //    found.Dispose();
+            //}
+            DataSet dt = BackEnd.GetWinningNumbers("phone");
+            frmWinningList_Split frmWinning = new frmWinningList_Split("PHONE WINNING NUMBERS", dt);
             frmWinning.Show();
         }
 

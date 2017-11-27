@@ -9,13 +9,14 @@ using System.Windows.Forms;
 
 namespace LuckyDrawApp
 {
-    public partial class frmWinningList : Form
+    public partial class frmWinningList_Split : Form
     {
-        public frmWinningList(string title,DataSet ds)
+        public frmWinningList_Split(string title, DataSet ds)
         {
             InitializeComponent();
             this.lblTitle.Text = title;
             dgv.DataSource = ds.Tables[0];
+            dgv2.DataSource = ds.Tables[1];
 
         }
 
@@ -29,6 +30,7 @@ namespace LuckyDrawApp
                 this.StartPosition = FormStartPosition.Manual;
             }
             dgv.ClearSelection();
+            dgv2.ClearSelection();
         }
     }
 }

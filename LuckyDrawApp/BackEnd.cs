@@ -15,7 +15,8 @@ namespace LuckyDrawApp
         {
             MySqlConnection sqlcon = new MySqlConnection();
             MySqlCommand sqlcmd = new MySqlCommand();
-            sqlcmd.CommandText = "Select ticketNo,branch_id,user_id,status,remarks,created_at,updated_at from tickets where ticketNo=@ticketNo and status='Staff Entery'";
+            //sqlcmd.CommandText = "Select ticketNo,branch_id,user_id,status,remarks,created_at,updated_at from tickets where ticketNo=@ticketNo and status='Staff Entery'";
+            sqlcmd.CommandText = "Select ticketNo,branch_id,user_id,status,remarks,created_at,updated_at from tickets where ticketNo=@ticketNo";
             sqlcmd.Parameters.AddWithValue("@ticketNo", pickedNo);
 
             sqlcon.ConnectionString = conString;
@@ -37,8 +38,9 @@ namespace LuckyDrawApp
             
         }
 
-        public static DataTable GetWinningNumbers(string type)
+        public static DataSet GetWinningNumbers(string type)
         {
+            DataSet ds = new DataSet();
             string tickets = "";
 
             DataTable dt = new DataTable();
@@ -46,11 +48,15 @@ namespace LuckyDrawApp
             dt.Columns.Add("TicketNo");
             dt.Columns.Add("Branch");
 
+            DataTable dt2 = new DataTable();
+            dt2.Columns.Add("SrNo");
+            dt2.Columns.Add("TicketNo");
+            dt2.Columns.Add("Branch");
+
             string filePath = "";
             if (type == "car") { filePath = "Cars.csv"; }
             if (type == "bike") { filePath="Bikes.csv";}
             if (type == "phone") { filePath="Phones.csv";}
-
 
             if (File.Exists(filePath))
             {
@@ -67,9 +73,12 @@ namespace LuckyDrawApp
                 tickets = tickets.Substring(0, tickets.Trim().Length - 1);
             }
 
-            MySqlConnection sqlcon = new MySqlConnection();
-            MySqlCommand sqlcmd = new MySqlCommand();
-            sqlcmd.CommandText = "Select ticketNo,branches.name as branchName from tickets inner join branches on branches.id=tickets.branch_id  where status='Staff Entery' and ticketno in ("+tickets+")";
+            MySqlConnection sqlcon;
+            MySqlCommand sqlcmd;
+
+            sqlcon= new MySqlConnection();
+            sqlcmd = new MySqlCommand();
+            sqlcmd.CommandText = "Select ticketNo,branches.name as branchName from tickets inner join branches on branches.id=tickets.branch_id  where  ticketno in ("+tickets+")";
             
             sqlcon.ConnectionString = conString;
             sqlcmd.Connection = sqlcon;
@@ -78,16 +87,26 @@ namespace LuckyDrawApp
             
 
             MySqlDataReader dr = sqlcmd.ExecuteReader();
-            
-
             int i=1;
             while(dr.Read())
             {
-                DataRow dtr = dt.NewRow();
-                dtr["SrNo"] = i;
-                dtr["TicketNo"] = dr["ticketNo"];
-                dtr["Branch"] = dr["branchName"];
-                dt.Rows.Add(dtr);
+                if(i>=16)
+                {
+                    DataRow dtr = dt2.NewRow();
+                    dtr["SrNo"] = i;
+                    dtr["TicketNo"] = dr["ticketNo"];
+                    dtr["Branch"] = dr["branchName"];
+                    dt2.Rows.Add(dtr);
+                }
+                else
+                {
+                    DataRow dtr = dt.NewRow();
+                    dtr["SrNo"] = i;
+                    dtr["TicketNo"] = dr["ticketNo"];
+                    dtr["Branch"] = dr["branchName"];
+                    dt.Rows.Add(dtr);
+                }
+                
                 i++;
             }
 
@@ -95,7 +114,9 @@ namespace LuckyDrawApp
             sqlcmd.Dispose();
             dr.Dispose();
 
-            return dt;
+            ds.Tables.Add(dt);
+            ds.Tables.Add(dt2);
+            return ds;
         }
 
         public static void Save(string winningNo,string type)
